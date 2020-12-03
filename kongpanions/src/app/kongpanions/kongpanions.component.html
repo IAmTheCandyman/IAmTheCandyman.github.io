@@ -1,0 +1,20 @@
+<div class="container" *ngIf="kongpanionData" style="padding-top:2rem">
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;"><h2>Kongpanions for Kongregate</h2></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;"><h4>2017-2019</h4></div>
+    </div>
+    <div class="row" style="padding-top:2rem">
+        <div class="col-md-4 kp" *ngFor="let kongpanion of kongpanionData">
+            <div class="row">
+                <div class="col-md-6" *ngIf="kongpanion.name !== 'Nikhil'"><img src="{{kongpanion.normal_icon_url}}" alt="{{kongpanion.name}}"/></div>
+                <div class="col-md-6" *ngIf="kongpanion.name === 'Nikhil'"><img src="{{kongpanion.shiny_icon_url}}" alt="{{kongpanion.name}}"/></div>
+                <div class="col-md-6" style="overflow-wrap:break-word">
+                    <div class="row" style="font-weight:bold">{{kongpanion.name}}</div>
+                    <div class="row">{{kongpanion.description}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
